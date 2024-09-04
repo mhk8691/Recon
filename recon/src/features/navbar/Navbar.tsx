@@ -1,4 +1,5 @@
 import { Typography, Button, Box } from "@mui/material";
+import { NavLink, useNavigate } from "react-router-dom";
 const tab: Array<{ icon: React.ReactNode; text: string }> = [
   {
     icon: (
@@ -142,11 +143,12 @@ const navStyle: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: ".5rem 1.5rem",
+  padding: ".7rem 1.5rem",
   borderBottom: "1px solid #52525B",
 };
 
 export default function Navbar() {
+  const navigate = useNavigate();
   return (
     <nav style={navStyle}>
       <Box style={{ display: "flex", alignItems: "center" }}>
@@ -187,6 +189,8 @@ export default function Navbar() {
               sx={{ mx: ".3rem" }}
               color="inherit"
               key={index}
+              component={NavLink}
+              to={item.text.toLowerCase()}
             >
               {item.icon}
               <Typography
@@ -216,6 +220,7 @@ export default function Navbar() {
           variant="contained"
           color="inherit"
           style={{ marginLeft: "1rem" }}
+          onClick={() => navigate("/sign-in")}
         >
           Login
         </Button>
