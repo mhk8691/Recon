@@ -143,7 +143,7 @@ const navStyle: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  padding: ".7rem 1.5rem",
+  padding: ".7rem 2rem",
   borderBottom: "1px solid #52525B",
 };
 
