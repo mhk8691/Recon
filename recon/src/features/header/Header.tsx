@@ -8,7 +8,6 @@ const exposuresStyle: React.CSSProperties = {
 };
 const scansStyle: React.CSSProperties = {
   border: "1px solid #27170C",
-  // backgroundColor: "#110D0B",
   background: "linear-gradient(180deg,  #0E0B0B 0%,#130E0B 100%)",
   padding: "1.5rem",
 };
