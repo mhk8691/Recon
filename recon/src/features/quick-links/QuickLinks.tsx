@@ -1,4 +1,5 @@
 import { Box, Typography, Grid2 as Grid } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 type Link = {
   title: string;
   icon: React.ReactNode;
@@ -43,7 +44,7 @@ const links: Array<Link> = [
         ></path>
       </svg>
     ),
-    link: "/templates",
+    link: "/scans/configs?type=alerting",
     description: "Receive alerts on new vulnerabilities and assets.",
   },
   {
@@ -63,7 +64,7 @@ const links: Array<Link> = [
         ></path>
       </svg>
     ),
-    link: "/templates",
+    link: "/scans/configs?type=reporting",
     description: "Automatically create tickets on Jira, GitLab.",
   },
   {
@@ -83,7 +84,7 @@ const links: Array<Link> = [
         ></path>
       </svg>
     ),
-    link: "/templates",
+    link: "/scans/configs?type=template",
     description: "Setup scans for your internal network, CI/CD.",
   },
 
@@ -104,7 +105,7 @@ const links: Array<Link> = [
         ></path>
       </svg>
     ),
-    link: "/templates",
+    link: "/cloud/scanning/nuclei-scan",
     description: "Monitor your assets as your team deploys.",
   },
   {
@@ -124,11 +125,12 @@ const links: Array<Link> = [
         ></path>
       </svg>
     ),
-    link: "/templates",
+    link: "/api-reference/introduction",
     description: "Create custom automations using our APIs",
   },
 ];
 export default function QuickLinks() {
+    const navigate = useNavigate();
   return (
     <Box mt={10}>
       <Typography variant="body1" color="initial">
@@ -146,6 +148,7 @@ export default function QuickLinks() {
               bgcolor="#0D0D0F"
               display={"flex"}
               alignItems={"center"}
+              onClick={()=> navigate(link.link)}
             >
               <Box>{link.icon}</Box>
               <Box ml={2}>
