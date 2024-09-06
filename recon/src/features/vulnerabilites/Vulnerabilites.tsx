@@ -6,7 +6,8 @@ import styles from "./Vulnerabilites.module.css";
 import { vulnerabilitiesList } from "./Vulnerabilites.list";
 import Search from "./Search";
 import { Vulnerability } from "./Vulnerabilites.types";
-
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -16,6 +17,7 @@ const style = {
   boxShadow: 24,
   p: 4,
   borderRadius: "1rem",
+  borderColor: "red",
 };
 
 function colorCalculator(level: string): Array<string> {
@@ -153,48 +155,65 @@ export default function Vulnerabilites() {
               >
                 {oneVulnerability?.description}
               </Typography>
-              <Box mt={2} display={"flex"} alignItems={"center"}>
-                <Chip
-                  label={oneVulnerability?.level}
-                  variant="outlined"
-                  sx={{
-                    bgcolor: colorCalculator(oneVulnerability?.level + "")[1],
-                    color: colorCalculator(oneVulnerability?.level + "")[0],
-                    borderColor: colorCalculator(
-                      oneVulnerability?.level + ""
-                    )[1],
-                  }}
-                />
-                <Chip
-                  label={oneVulnerability?.name}
-                  variant="outlined"
-                  sx={{
-                    ml: 1,
-                    color: "#A6A6A6",
-                    paddingY: ".8rem",
-                    borderColor: "#252527",
-                  }}
-                  size="small"
-                />
-                <Chip
-                  label={oneVulnerability?.status}
-                  variant="outlined"
-                  sx={{ ml: 1, color: "#A6A6A6", borderColor: "#252527" }}
-                />
-                <Button
-                  variant="contained"
-                  startIcon={<RadarIcon />}
-                  size="small"
-                  sx={{ ml: 2.5 }}
-                  component={Link}
-                  to="/vulnerabilities/scan"
-                >
-                  scan
-                </Button>
+              <Box mt={2} mb={3} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+                <Box>
+                  <Chip
+                    label={oneVulnerability?.level}
+                    variant="outlined"
+                    sx={{
+                      bgcolor: colorCalculator(oneVulnerability?.level + "")[1],
+                      color: colorCalculator(oneVulnerability?.level + "")[0],
+                      borderColor: colorCalculator(
+                        oneVulnerability?.level + ""
+                      )[1],
+                    }}
+                  />
+                  <Chip
+                    label={oneVulnerability?.name}
+                    variant="outlined"
+                    sx={{
+                      ml: 1,
+                      color: "#A6A6A6",
+                      paddingY: ".8rem",
+                      borderColor: "#252527",
+                    }}
+                    size="small"
+                  />
+                  <Chip
+                    label={oneVulnerability?.status}
+                    variant="outlined"
+                    sx={{ ml: 1, color: "#A6A6A6", borderColor: "#252527" }}
+                  />
+                </Box>
+                <Box>
+                  <Button
+                    variant="contained"
+                    startIcon={<RadarIcon />}
+                    size="small"
+                    sx={{ ml: 2.5 }}
+                    component={Link}
+                    to="/vulnerabilities/scan"
+                  >
+                    scan
+                  </Button>
+                </Box>
               </Box>
-              <code style={{ whiteSpace: "pre-wrap",marginTop:"3rem" }}>
-                <pre>{oneVulnerability?.code}</pre>
-              </code>
+              <Typography
+                variant="body2"
+                color="initial"
+                sx={{ textAlign: "end", mb: 2 }}
+              >
+                <span style={{ color: "#4b4a57", marginRight: ".3rem" }}>
+                  Added on
+                  {oneVulnerability?.date} by
+                </span>
+                <span style={{ color: "#b7b7b7" }}>
+                  {oneVulnerability?.author}
+                </span>
+              </Typography>
+              <SyntaxHighlighter language="javascript" style={dark}>
+                {oneVulnerability?.code + ""}
+              </SyntaxHighlighter>
             </Box>
           </Modal>
         </main>
