@@ -1,6 +1,8 @@
 import { Container } from "@mui/material";
 import Header from "../features/header/Header";
 import Banner from "../features/banner/Banner";
+import Vulnerabilites from "../features/vulnerabilites/Vulnerabilites";
+import QuickLinks from "../features/quick-links/QuickLinks";
 const mainStyle: React.CSSProperties = {
   border: "1px solid #202022",
   backgroundColor: "#0D0D0F",
@@ -15,11 +17,9 @@ export default function Homepage() {
       </header>
       <main style={mainStyle}>
         <Banner />
-        <br />
-        <br />
-        <br />
-        <br />
+        <Vulnerabilites />
       </main>
+      <QuickLinks/>
     </Container>
   );
 }
