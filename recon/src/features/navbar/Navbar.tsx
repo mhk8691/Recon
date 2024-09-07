@@ -1,6 +1,7 @@
 import { Typography, Button, Box } from "@mui/material";
 import { NavLink, useNavigate } from "react-router-dom";
-const tab: Array<{ icon: React.ReactNode; text: string }> = [
+import "./Navbar.css";
+const tab: Array<{ icon: React.ReactNode; text: string; link: string }> = [
   {
     icon: (
       <svg
@@ -22,6 +23,7 @@ const tab: Array<{ icon: React.ReactNode; text: string }> = [
       </svg>
     ),
 
+    link: "/",
     text: "Dashboard",
   },
   {
@@ -90,6 +92,7 @@ const tab: Array<{ icon: React.ReactNode; text: string }> = [
         </g>
       </svg>
     ),
+    link: "assets",
     text: "Assets",
   },
   {
@@ -113,6 +116,7 @@ const tab: Array<{ icon: React.ReactNode; text: string }> = [
         </g>
       </svg>
     ),
+    link: "scans",
     text: "Scans",
   },
   {
@@ -136,6 +140,7 @@ const tab: Array<{ icon: React.ReactNode; text: string }> = [
         </g>
       </svg>
     ),
+    link: "templates",
     text: "Templates",
   },
 ];
@@ -190,15 +195,18 @@ export default function Navbar() {
               color="inherit"
               key={index}
               component={NavLink}
-              to={item.text.toLowerCase()}
+              to={item.link}
             >
               {item.icon}
               <Typography
                 variant="body2"
                 component="span"
-                sx={{ ml: 0.5, fontSize: ".7rem" }}
+                sx={{
+                  ml: 0.5,
+                  fontSize: ".7rem",
+                  color: "rgba(161, 161, 171)",
+                }}
                 key={index}
-                color="rgba(161, 161, 171)"
               >
                 {item.text}
               </Typography>

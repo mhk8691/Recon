@@ -1,0 +1,9 @@
+.active {
+  background-color: #202022 !important;
+}
+.active span {
+  color: white ;
+}
+.active svg g{
+   stroke: #747EDD !important;
+}
