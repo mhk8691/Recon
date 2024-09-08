@@ -3,11 +3,11 @@ import Header from "./Header";
 import SearchSort from "./Search.Sort";
 import AssetsList from "./Assets.List";
 import { Box, Container, Typography } from "@mui/material";
-
+import { tabObject } from "./Tab.object";
 export default function Assets() {
   return (
     <>
-      <Tab />
+      <Tab tabObject={tabObject} />
       <hr style={{ border: "1px solid #52525B" }} />
       <Container maxWidth="xl" sx={{ marginTop: "1rem" }}>
         <Header />
@@ -20,8 +20,8 @@ export default function Assets() {
           bottom: 0,
           backgroundColor: "#0D0D0F",
           py: 1,
-          pb:2,
-          px:3
+          pb: 2,
+          px: 3,
         }}
       >
         <Typography
