@@ -36,7 +36,10 @@ export const rows = [
     4443,
 
     "187.72.100.99",
-    ["https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg"],
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
 
     200,
     "User Portal",
@@ -53,7 +56,10 @@ export const rows = [
     4443,
 
     "187.72.100.99",
-    ["https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg"],
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
 
     200,
     "User Portal",
@@ -62,4 +68,185 @@ export const rows = [
     "1mo ago",
     "1mo ago"
   ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  createData(
+    {
+      ip: "187.72.100.99",
+      date: "1mo ago",
+    },
+    4443,
+
+    "187.72.100.99",
+    [
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+      "https://storage.googleapis.com/pdcp-assets-dev/icons/Java.svg",
+    ],
+
+    200,
+    "User Portal",
+    "--",
+    25664,
+    "1mo ago",
+    "1mo ago"
+  ),
+  
 ];

@@ -9,5 +9,6 @@ export default function Inventory() {
       <SortFilter />
       <Table />
     </Box>
+    
   );
 }
