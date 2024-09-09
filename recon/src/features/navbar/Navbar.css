@@ -1,9 +1,9 @@
-.active {
+.navbar.active {
   background-color: #202022 !important;
 }
-.active span {
+.navbar.active span {
   color: white ;
 }
-.active svg g{
+.navbar.active svg g{
    stroke: #747EDD !important;
 }

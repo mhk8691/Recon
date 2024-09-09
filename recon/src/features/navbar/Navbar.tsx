@@ -196,6 +196,7 @@ export default function Navbar() {
               key={index}
               component={NavLink}
               to={item.link}
+              className="navbar"
             >
               {item.icon}
               <Typography

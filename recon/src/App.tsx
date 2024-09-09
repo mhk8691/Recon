@@ -17,8 +17,6 @@ export default function App() {
             <Route path="/assets/inventory" element={<InventoryPage />} />
             <Route path="/assets/technologies" element={<TechnologiesPage />} />
           </Route>
-
-
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,13 +1,13 @@
 import { Box, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import { TabType } from "./Tab.types";
-
+import  "./Tab.css";
 export default function Tab({ tabObject }: { tabObject: Array<TabType> }) {
   return (
-    <Box display={"flex"} alignItems={"center"} gap={5} px={3} my={1.5}>
+    <Box display={"flex"} alignItems={"center"} gap={5} px={3} my={1.5} >
       {tabObject.map((tab, index) => (
         <Box key={index}>
-          <NavLink to={tab.link} style={{ color: "rgba(161, 161, 171)" }}>
+          <NavLink to={tab.link} style={{ color: "rgba(161, 161, 171)" }} className='tab'>
             <Box display={"flex"} alignItems={"center"}>
               {tab.icon}
               <Typography
