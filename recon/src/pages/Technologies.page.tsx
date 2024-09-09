@@ -1,15 +1,11 @@
-import Header from "./Header";
-import SearchSort from "./Search.Sort";
-import AssetsList from "./Assets.List";
 import { Box, Container, Typography } from "@mui/material";
-export default function Assets() {
+import Technologies from "../features/technologies/Technologies";
+
+export default function TechnologiesPage() {
   return (
     <>
-      
-      <Container maxWidth="xl" sx={{ marginTop: "1rem" }}>
-        <Header />
-        <SearchSort />
-        <AssetsList />
+      <Container maxWidth="lg" sx={{ marginTop: "3rem" }}>
+        <Technologies />
       </Container>
       <Box
         sx={{

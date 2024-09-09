@@ -13,8 +13,7 @@ export default function Tab({ tabObject }: { tabObject: Array<TabType> }) {
               <Typography
                 variant="body2"
                 component="span"
-                color="initial"
-                sx={{ color: "rgba(161, 161, 171)", ml: 1 }}
+                sx={{ color: "rgba(161, 161, 171)", ml: 1 ,fontSize:".8rem"}}
               >
                 {tab.text}
               </Typography>

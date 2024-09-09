@@ -6,6 +6,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { rows } from "./Data";
+import Menu from "./Menu";
 export default function BasicTable() {
   return (
     <>
@@ -13,17 +14,18 @@ export default function BasicTable() {
         <Table aria-label="simple table" size="small">
           <TableHead
             sx={{
-              bgcolor: "#151517",
+              bgcolor: "#18181B",
               borderRadius: "30px",
             }}
           >
-            <TableRow sx={{}}>
+            <TableRow>
               <TableCell
                 style={{
                   color: "#6F6F76",
                   fontSize: ".7rem",
                   backgroundColor: "#161618",
                 }}
+                width={"35%"}
               >
                 HOST
               </TableCell>
@@ -35,7 +37,7 @@ export default function BasicTable() {
               </TableCell>
               <TableCell
                 style={{ color: "#6F6F76", fontSize: ".7rem" }}
-                align="right"
+                align="center"
               >
                 IP
               </TableCell>
@@ -53,7 +55,8 @@ export default function BasicTable() {
               </TableCell>
               <TableCell
                 style={{ color: "#6F6F76", fontSize: ".7rem" }}
-                align="right"
+                align="center"
+                width={"15%"}
               >
                 TITLE
               </TableCell>
@@ -64,7 +67,7 @@ export default function BasicTable() {
                 CNAME
               </TableCell>
               <TableCell
-                style={{ color: "#6F6F76", fontSize: ".7rem" }}
+                style={{ color: "#6F6F76", fontSize: ".65rem" }}
                 align="right"
               >
                 CONTENT LENGTH
@@ -81,6 +84,7 @@ export default function BasicTable() {
               >
                 LAST SEEN
               </TableCell>
+              <TableCell align="right" width={'5%'}> </TableCell>
             </TableRow>
           </TableHead>
           <TableBody sx={{ bgcolor: "#0E0E12", overflowX: "auto" }}>
@@ -106,8 +110,8 @@ export default function BasicTable() {
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        width="15"
-                        height="15"
+                        width="13"
+                        height="13"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -124,7 +128,7 @@ export default function BasicTable() {
 
                   <span
                     style={{
-                      marginLeft: "12rem",
+                      marginLeft: "8rem",
                       backgroundColor: "#131C1A",
                       color: "#0B613A",
                       padding: ".2rem",
@@ -236,12 +240,17 @@ export default function BasicTable() {
                 >
                   {row.LASTSEEN}
                 </TableCell>
+                <TableCell
+                  align="right"
+                  style={{ color: "#8C8C94", fontSize: ".7rem" }}
+                >
+                  <Menu />
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-      
     </>
   );
 }
