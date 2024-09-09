@@ -1,5 +1,5 @@
 import { Typography, Button, Box } from "@mui/material";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./Navbar.css";
 const tab: Array<{ icon: React.ReactNode; text: string; link: string }> = [
   {
@@ -156,7 +156,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   return (
     <nav style={navStyle}>
-      <Box style={{ display: "flex", alignItems: "center" }}>
+      <Box component={Link} to={'/'} style={{ display: "flex", alignItems: "center" }}>
         <svg
           width="24"
           height="24"

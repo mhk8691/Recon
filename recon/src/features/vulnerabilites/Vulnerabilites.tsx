@@ -129,13 +129,40 @@ export default function Vulnerabilites() {
                     by {vulnerability.author}
                   </Typography>
                 </Typography>
-                <Button
+                {/* <Button
                   variant="contained"
                   startIcon={<RadarIcon />}
                   size="small"
                   sx={{ ml: 2.5 }}
                   component={Link}
                   to="/vulnerabilities/scan"
+                >
+                  scan
+                </Button> */}
+                <Button
+                  variant="outlined"
+                  size="small"
+                  sx={{
+                    fontSize: ".7rem",
+                    padding: "0",
+                    color: "white",
+                    borderColor: "#333333",
+                    bgcolor: "#171717",
+                    py: ".2rem",
+                    px: ".3rem",
+                    ml: 2.5 ,
+                    borderRadius: "7px",
+                    transition: ".3s ease",
+                    "&:hover": {
+                      backgroundColor: "#6366F1",
+                      color: "white",
+                      borderColor: "#6366F1",
+                      boxShadow: "none",
+                      transform:'scale(1.1)'
+                    },
+                  }}
+                  color="primary"
+                  startIcon={<RadarIcon />}
                 >
                   scan
                 </Button>
@@ -155,7 +182,13 @@ export default function Vulnerabilites() {
               >
                 {oneVulnerability?.description}
               </Typography>
-              <Box mt={2} mb={3} display={"flex"} alignItems={"center"} justifyContent={"space-between"}>
+              <Box
+                mt={2}
+                mb={3}
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"space-between"}
+              >
                 <Box>
                   <Chip
                     label={oneVulnerability?.level}
