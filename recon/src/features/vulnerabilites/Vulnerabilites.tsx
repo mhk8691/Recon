@@ -85,7 +85,12 @@ export default function Vulnerabilites() {
               alignItems={"center"}
               key={index}
               p={2}
-              sx={{ cursor: "pointer" }}
+              sx={{
+                cursor: "pointer",
+                "&:hover": {
+                  bgcolor: "#171719",
+                },
+              }}
               onClick={() => handleOpen(vulnerability.id)}
             >
               <Box display={"flex"} alignItems={"center"}>
@@ -130,7 +135,7 @@ export default function Vulnerabilites() {
                     by {vulnerability.author}
                   </Typography>
                 </Typography>
-                
+
                 <Button
                   variant="outlined"
                   size="small"
@@ -142,7 +147,7 @@ export default function Vulnerabilites() {
                     bgcolor: "#171717",
                     py: ".2rem",
                     px: ".3rem",
-                    ml: 2.5 ,
+                    ml: 2.5,
                     borderRadius: "7px",
                     transition: ".3s ease",
                     "&:hover": {
@@ -150,7 +155,7 @@ export default function Vulnerabilites() {
                       color: "white",
                       borderColor: "#6366F1",
                       boxShadow: "none",
-                      transform:'scale(1.1)'
+                      transform: "scale(1.1)",
                     },
                   }}
                   color="primary"
