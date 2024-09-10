@@ -3,7 +3,7 @@ import Header from "./Header";
 import Filter from "./Filter";
 import Sort from "./Sort";
 import ScanList from "./ScanList";
-import Footer from "../../footer";
+import Footer from "../../Footer";
 export default function Scans() {
   return (
     <>

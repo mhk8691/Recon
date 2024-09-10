@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import Inventory from "../features/inventory/Inventory";
-import Footer from "../footer";
+import Footer from "../Footer";
 
 export default function InventoryPage() {
   return (

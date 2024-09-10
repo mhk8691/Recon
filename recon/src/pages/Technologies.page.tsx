@@ -1,6 +1,6 @@
 import { Container } from "@mui/material";
 import Technologies from "../features/technologies/Technologies";
-import Footer from "../footer";
+import Footer from "../Footer";
 
 export default function TechnologiesPage() {
   return (
