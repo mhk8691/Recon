@@ -146,6 +146,7 @@ export default function QuickLinks() {
               px={3}
               py={2.5}
               bgcolor="#0D0D0F"
+              className='quick-links'
               sx={{
                 "&:hover": {
                   bgcolor: "#171719",
@@ -180,6 +181,7 @@ export default function QuickLinks() {
                   height="16"
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="arrow"
                 >
                   <path
                     d="M5.74 3.2a.75.75 0 0 0-.04 1.06L9.23 8 5.7 11.74a.75.75 0 1 0 1.1 1.02l4-4.25a.75.75 0 0 0 0-1.02l-4-4.25a.75.75 0 0 0-1.06-.04Z"
