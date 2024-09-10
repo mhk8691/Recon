@@ -7,7 +7,7 @@ export default function AssetsPages() {
     <div>
       <header>
         <Tab tabObject={tabObject} />
-        <hr style={{ border: "1px solid #52525B" }} />
+        
       </header>
       <main>
         <Outlet />
