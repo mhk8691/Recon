@@ -86,6 +86,9 @@ export default function ChangeLogs() {
                   borderRadius: "12px",
                   height: "310px",
                   border: "2px solid #18181B",
+                  "&:hover": {
+                    bgcolor: "#171719",
+                  },
                 }}
               >
                 <img
@@ -143,7 +146,11 @@ export default function ChangeLogs() {
                   alignItems: "center",
                 }}
               >
-                <Typography variant="body1" color="initial" sx={{ mr: 0.5 ,fontSize:".9rem"}}>
+                <Typography
+                  variant="body1"
+                  color="initial"
+                  sx={{ mr: 0.5, fontSize: ".9rem" }}
+                >
                   View All
                 </Typography>
                 <svg
