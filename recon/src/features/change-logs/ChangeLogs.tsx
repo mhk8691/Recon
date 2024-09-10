@@ -144,6 +144,9 @@ export default function ChangeLogs() {
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
+                  "&:hover": {
+                    bgcolor: "#171719",
+                  },
                 }}
               >
                 <Typography
