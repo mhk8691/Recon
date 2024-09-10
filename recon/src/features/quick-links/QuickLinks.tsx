@@ -146,9 +146,14 @@ export default function QuickLinks() {
               px={3}
               py={2.5}
               bgcolor="#0D0D0F"
+              sx={{
+                "&:hover": {
+                  bgcolor: "#171719",
+                },
+              }}
               display={"flex"}
               alignItems={"center"}
-              onClick={()=> navigate(link.link)}
+              onClick={() => navigate(link.link)}
             >
               <Box>{link.icon}</Box>
               <Box ml={2}>
