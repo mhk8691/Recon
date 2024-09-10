@@ -8,6 +8,8 @@ import TechnologiesPage from "./pages/Technologies.page";
 import ScansPage from "./pages/Scans.page";
 import Configs from "./features/configs/Configs";
 import Scans from "./features/scans/Scans";
+import TemplatesPage from "./pages/Templates.page";
+import Historty from "./features/history/Historty";
 export default function App() {
   return (
     <BrowserRouter>
@@ -21,9 +23,15 @@ export default function App() {
           </Route>
 
           <Route path="/scans" element={<ScansPage />}>
-            <Route index element={<Scans/>} />
+            <Route index element={<Scans />} />
             <Route path="/scans/results" element={<h1>scans</h1>} />
             <Route path="/scans/configs" element={<Configs />} />
+          </Route>
+          <Route path="/templates" element={<TemplatesPage />}>
+            <Route index element={<Scans />} />
+            <Route path="/templates/history" element={<Historty />} />
+            <Route path="/templates/leaderboard" element={<Configs />} />
+            <Route path="/templates/feed" element={<Configs />} />
           </Route>
         </Route>
       </Routes>
