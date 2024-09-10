@@ -1,10 +1,8 @@
 import { Box, IconButton } from "@mui/material";
 import { useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import CachedOutlinedIcon from "@mui/icons-material/CachedOutlined";
-import styles from "../vulnerabilites/Vulnerabilites.module.css";
-
+import Search from "../vulnerabilites/Search";
 
 export default function SearchSort() {
   const [query, setQuery] = useState("");
@@ -17,22 +15,16 @@ export default function SearchSort() {
 
   return (
     <Box display={"flex"} mt={5}>
-      <form
-        action=""
-        onSubmit={handleSubmit}
-        className={styles.test}
-        style={{ width: "75%", paddingTop: ".1rem", paddingBottom: ".1rem" }}
-      >
-        <input
-          type="search"
-          name=""
-          value={query}
-          onChange={handleChange}
-          placeholder="Search assets groups"
-          id=""
+      <Box width={"100%"}>
+        <Search
+          handleSubmit={handleSubmit}
+          handleChange={handleChange}
+          query={query}
+          placeholder="Search Assets groups"
+          formStyle={{ width: "100%" }}
+          style={{ paddingTop: ".7rem ",paddingBottom : ".7rem" }}
         />
-        <SearchIcon fontSize="small" sx={{ marginRight: ".3rem" }} />
-      </form>
+      </Box>
       <select
         name=""
         id=""

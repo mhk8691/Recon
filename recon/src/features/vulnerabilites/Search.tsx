@@ -6,22 +6,29 @@ export default function Search({
   query,
   style,
   formStyle,
+  placeholder,
 }: {
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  query: string;
+  handleSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
+  handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  query?: string;
   style?: React.CSSProperties;
   formStyle?: React.CSSProperties;
+  placeholder: string;
 }) {
   return (
     <header className={styles.header}>
-      <form action="" onSubmit={handleSubmit} className={styles.test} style={formStyle}>
+      <form
+        action=""
+        onSubmit={handleSubmit}
+        className={styles.test}
+        style={formStyle}
+      >
         <input
           type="search"
           name=""
           value={query}
           onChange={handleChange}
-          placeholder="Search vulnerabilities"
+          placeholder={placeholder}
           id=""
           style={style}
         />

@@ -72,6 +72,7 @@ export default function Vulnerabilites() {
         handleSubmit={handleSubmit}
         handleChange={handleChange}
         query={query}
+        placeholder="Search Vulnerabilities"
       />
       {queryResult && (
         <main className={styles.main}>
@@ -129,16 +130,7 @@ export default function Vulnerabilites() {
                     by {vulnerability.author}
                   </Typography>
                 </Typography>
-                {/* <Button
-                  variant="contained"
-                  startIcon={<RadarIcon />}
-                  size="small"
-                  sx={{ ml: 2.5 }}
-                  component={Link}
-                  to="/vulnerabilities/scan"
-                >
-                  scan
-                </Button> */}
+                
                 <Button
                   variant="outlined"
                   size="small"
