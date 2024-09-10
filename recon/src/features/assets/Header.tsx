@@ -1,7 +1,7 @@
 import { Box, Typography, Button } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
 import FilterDramaIcon from "@mui/icons-material/FilterDrama";
 import { useNavigate } from "react-router-dom";
+import AddButton from "./AddButton";
 export default function Header() {
   const navigate = useNavigate();
   return (
@@ -25,15 +25,7 @@ export default function Header() {
         </Typography>
       </Box>
       <Box>
-        <Button
-          variant="contained"
-          color="inherit"
-          size="medium"
-          endIcon={<AddIcon />}
-          sx={{ fontSize: ".8rem" }}
-        >
-          Add New Assets
-        </Button>
+        <AddButton>Add New Assets</AddButton>
         <Button
           variant="contained"
           color="inherit"

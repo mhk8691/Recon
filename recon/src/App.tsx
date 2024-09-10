@@ -6,7 +6,8 @@ import InventoryPage from "./pages/Inventory.page";
 import AssetsGroups from "./pages/AssetsGroups.page";
 import TechnologiesPage from "./pages/Technologies.page";
 import ScansPage from "./pages/Scans.page";
-import ConfigsPages from "./pages/Configs.pages";
+import Configs from "./features/configs/Configs";
+import Scans from "./features/scans/Scans";
 export default function App() {
   return (
     <BrowserRouter>
@@ -20,9 +21,9 @@ export default function App() {
           </Route>
 
           <Route path="/scans" element={<ScansPage />}>
-            <Route index element={<h1>scans</h1>} />
+            <Route index element={<Scans/>} />
             <Route path="/scans/results" element={<h1>scans</h1>} />
-            <Route path="/scans/configs" element={<ConfigsPages />} />
+            <Route path="/scans/configs" element={<Configs />} />
           </Route>
         </Route>
       </Routes>
