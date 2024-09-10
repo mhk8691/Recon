@@ -229,6 +229,7 @@ export default function Navbar() {
           variant="contained"
           color="inherit"
           style={{ marginLeft: "1rem" }}
+          size="small"
           onClick={() => navigate("/sign-in")}
         >
           Login
