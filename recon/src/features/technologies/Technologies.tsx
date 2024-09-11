@@ -1,12 +1,13 @@
 import CollapsibleTable from "./Table";
 import Search from "../vulnerabilites/Search";
+import { Container } from "@mui/material";
 const formStyle: React.CSSProperties = {
   width: "100%",
 };
 
 export default function Technologies() {
   return (
-    <div>
+    <Container maxWidth="lg" sx={{ marginTop: "3rem" }}>
       <Search
         handleSubmit={(e) => {
           e.preventDefault();
@@ -15,6 +16,6 @@ export default function Technologies() {
         placeholder="Search your technologies"
       />
       <CollapsibleTable />
-    </div>
+    </Container>
   );
 }
