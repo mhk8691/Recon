@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Tab from "../features/assets/Tab";
+import Tab from "../ui/Tab";
 import { tabObject } from "../features/scans/Tab.object";
 
 export default function ScansPage() {

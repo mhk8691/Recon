@@ -1,13 +1,39 @@
-import Header from "./Header";
 import SearchSort from "./Search.Sort";
 import AssetsList from "./Assets.List";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
+import Title from "../../ui/Title";
+import FilterDramaIcon from "@mui/icons-material/FilterDrama";
+import AddButton from "../../ui/AddButton";
+import { useNavigate } from "react-router-dom";
+
 export default function Assets() {
+  const navigate = useNavigate();
+
   return (
     <>
-      
       <Container maxWidth="xl" sx={{ marginTop: "1rem" }}>
-        <Header />
+        <Title
+          title="Your Assets"
+          description="Add Assets for scanning. Select an Asset Group to view all Assets in
+          that group, or check out Inventory for a full Asset list."
+        >
+          <AddButton>Add New Assets</AddButton>
+          <Button
+            variant="contained"
+            color="inherit"
+            size="medium"
+            endIcon={<FilterDramaIcon />}
+            sx={{
+              fontSize: ".8rem",
+              backgroundColor: "#442F0B",
+              color: "#E5940B",
+              ml: 2,
+            }}
+            onClick={() => navigate("/assets/configure")}
+          >
+            Connect Cloud Services
+          </Button>
+        </Title>
         <SearchSort />
         <AssetsList />
       </Container>
