@@ -1,5 +1,5 @@
 import SearchIcon from "@mui/icons-material/Search";
-import styles from "./Vulnerabilites.module.css";
+import styles from "./Search.module.css";
 export default function Search({
   handleSubmit,
   handleChange,

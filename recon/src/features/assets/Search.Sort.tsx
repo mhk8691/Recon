@@ -2,7 +2,7 @@ import { Box, IconButton } from "@mui/material";
 import { useState } from "react";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import CachedOutlinedIcon from "@mui/icons-material/CachedOutlined";
-import Search from "../vulnerabilites/Search";
+import Search from "../../ui/Search";
 
 export default function SearchSort() {
   const [query, setQuery] = useState("");
@@ -22,7 +22,7 @@ export default function SearchSort() {
           query={query}
           placeholder="Search Assets groups"
           formStyle={{ width: "100%" }}
-          style={{ paddingTop: ".7rem ",paddingBottom : ".7rem" }}
+          style={{ paddingTop: ".7rem ", paddingBottom: ".7rem" }}
         />
       </Box>
       <select

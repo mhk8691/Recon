@@ -1,7 +1,7 @@
 import { Box, Grid2 as Grid, IconButton } from "@mui/material/";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import CachedOutlinedIcon from "@mui/icons-material/CachedOutlined";
-import Search from "../vulnerabilites/Search";
+import Search from "../../ui/Search";
 export default function Sort() {
   return (
     <Grid container spacing={1} mt={5}>

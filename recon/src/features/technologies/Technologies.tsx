@@ -1,5 +1,5 @@
 import CollapsibleTable from "./Table";
-import Search from "../vulnerabilites/Search";
+import Search from "../../ui/Search";
 import { Container } from "@mui/material";
 const formStyle: React.CSSProperties = {
   width: "100%",

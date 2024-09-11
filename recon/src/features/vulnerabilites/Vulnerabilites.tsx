@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import styles from "./Vulnerabilites.module.css";
 import { vulnerabilitiesList } from "./Vulnerabilites.list";
-import Search from "./Search";
+import Search from "../../ui/Search";
 import { Vulnerability } from "./Vulnerabilites.types";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
