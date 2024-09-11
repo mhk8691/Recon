@@ -1,5 +1,6 @@
 import { Container, Typography } from "@mui/material";
 import Title from "../../ui/Title";
+import Header from "./Header";
 export default function Leaderboard() {
   return (
     <Container maxWidth="xl" sx={{ marginTop: "3rem" }}>
@@ -20,6 +21,7 @@ export default function Leaderboard() {
           Last updated 9 days ago
         </Typography>
       </Title>
+      <Header/>
     </Container>
   );
 }
