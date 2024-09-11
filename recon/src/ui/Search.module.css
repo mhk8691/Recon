@@ -20,8 +20,3 @@
 .test input::placeholder {
   color: #efefef;
 }
-.main {
-  border: 1px solid #3F484A;
-  border-radius: 10px;
-  margin-top: 2rem;
-}

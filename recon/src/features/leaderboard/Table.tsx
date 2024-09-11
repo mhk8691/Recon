@@ -63,7 +63,32 @@ export default function BasicTable() {
               }}
               width={"55%"}
             >
-              Contributor
+              <Box style={{ display: "flex", alignItems: "center" }}>
+                <span style={{ marginRight: ".5rem" }}>Contributor</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                >
+                  <g
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.25"
+                    stroke="currentColor"
+                  >
+                    <circle cx="9" cy="9" r="7.25"></circle>
+                    <line x1="9" y1="12.819" x2="9" y2="8.25"></line>
+                    <path
+                      d="M9,6.75c-.552,0-1-.449-1-1s.448-1,1-1,1,.449,1,1-.448,1-1,1Z"
+                      fill="currentColor"
+                      data-stroke="none"
+                      stroke="none"
+                    ></path>
+                  </g>
+                </svg>
+              </Box>
             </TableCell>
             <TableCell
               sx={{
@@ -93,7 +118,32 @@ export default function BasicTable() {
               }}
               align="left"
             >
-              Total Points
+              <Box style={{ display: "flex", alignItems: "center" }}>
+                <span style={{ marginRight: ".5rem" }}>Total Points</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                >
+                  <g
+                    fill="none"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.25"
+                    stroke="currentColor"
+                  >
+                    <circle cx="9" cy="9" r="7.25"></circle>
+                    <line x1="9" y1="12.819" x2="9" y2="8.25"></line>
+                    <path
+                      d="M9,6.75c-.552,0-1-.449-1-1s.448-1,1-1,1,.449,1,1-.448,1-1,1Z"
+                      fill="currentColor"
+                      data-stroke="none"
+                      stroke="none"
+                    ></path>
+                  </g>
+                </svg>
+              </Box>
             </TableCell>
           </TableRow>
         </TableHead>
@@ -107,11 +157,8 @@ export default function BasicTable() {
               key={row.title}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
-                "&:hover": {
-                  bgcolor: "#18181B",
-                },
+                
 
-                cursor: "pointer",
                 background:
                   (row.rating == 1 &&
                     "linear-gradient(90deg,  #20180A 0%,#0A0A0B 100%)") ||
@@ -132,7 +179,28 @@ export default function BasicTable() {
                   py: 1,
                 }}
               >
-                {row.rating}
+                {row.rating === 1 && (
+                  <img
+                    src="https://cloud.projectdiscovery.io/_next/image?url=%2Fgold.png&w=32&q=75&dpl=dpl_GFfKrc8mA6sbkKqEFonA8tUHnLfj"
+                    alt="1"
+                    style={{ width: "20px", marginTop: "-2px" }}
+                  />
+                )}
+                {row.rating === 2 && (
+                  <img
+                    src="https://cloud.projectdiscovery.io/_next/image?url=%2Fsilver.png&w=32&q=75&dpl=dpl_GFfKrc8mA6sbkKqEFonA8tUHnLfj"
+                    alt="2"
+                    style={{ width: "20px" }}
+                  />
+                )}
+                {row.rating === 3 && (
+                  <img
+                    src="https://cloud.projectdiscovery.io/_next/image?url=%2Fbronze.png&w=32&q=75&dpl=dpl_GFfKrc8mA6sbkKqEFonA8tUHnLfj"
+                    alt="3"
+                    style={{ width: "20px" }}
+                  />
+                )}
+                {row.rating > 3 && `#${row.rating}`}
               </TableCell>
               <TableCell
                 component="th"
@@ -144,12 +212,13 @@ export default function BasicTable() {
                   py: 1,
                   display: "flex",
                   alignItems: "center",
+                  mt:1
                 }}
               >
                 {row.title}
                 <Box component={"span"}>
                   {row.icons.map((icon, index) => (
-                    <Box component={"span"} sx={{ml:1.5}} key={index}>
+                    <Box component={"span"} sx={{ ml: 1.5 }} key={index}>
                       {icon}
                     </Box>
                   ))}

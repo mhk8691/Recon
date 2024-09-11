@@ -2,7 +2,6 @@ import { Box, Chip, Typography, Button, Modal } from "@mui/material";
 import RadarIcon from "@mui/icons-material/Radar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import styles from "./Vulnerabilites.module.css";
 import { vulnerabilitiesList } from "./Vulnerabilites.list";
 import Search from "../../ui/Search";
 import { Vulnerability } from "./Vulnerabilites.types";
@@ -75,7 +74,13 @@ export default function Vulnerabilites() {
         placeholder="Search Vulnerabilities"
       />
       {queryResult && (
-        <main className={styles.main}>
+        <main
+          style={{
+            border: " 1px solid #3F484A",
+            borderRadius: "10px",
+            marginTop: "2rem",
+          }}
+        >
           {queryResult?.map((vulnerability, index) => (
             <Box
               borderBottom={1}
