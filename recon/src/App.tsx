@@ -15,6 +15,7 @@ import Assets from "./features/assets/Assets";
 import Leaderboard from "./features/leaderboard/Leaderboard";
 import SettingsPage from "./pages/Settings.page";
 import Profile from "./features/profile/Profile";
+import Team from "./features/team/Team";
 
 export default function App() {
   return (
@@ -42,7 +43,7 @@ export default function App() {
           </Route>
           <Route path="/settings" element={<SettingsPage />}>
             <Route index element={<Profile />} />
-            <Route path="/settings/team" element={<Historty />} />
+            <Route path="/settings/team" element={<Team />} />
             <Route path="/settings/scan-ips" element={<Leaderboard />} />
             <Route path="/settings/billing" element={<Configs />} />
             <Route path="/settings/security" element={<Configs />} />

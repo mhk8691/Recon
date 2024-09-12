@@ -3,8 +3,13 @@ import { Box, Typography, Button } from "@mui/material";
 export default function Profile() {
   return (
     <Box>
-      <Box border={1} borderColor={"#27272A"} borderRadius={2}>
-        <Box p={3} bgcolor={"#101013"}>
+      <Box
+        border={1}
+        borderColor={"#27272A"}
+        borderRadius={2}
+        bgcolor={"#101013"}
+      >
+        <Box p={3} bgcolor="#101013">
           <Typography variant="body2" color="initial">
             Username
           </Typography>
@@ -36,6 +41,7 @@ export default function Profile() {
           justifyContent="space-between"
           px={3}
           py={1}
+          bgcolor="#09090B"
         >
           <Typography
             variant="body2"
