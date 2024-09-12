@@ -43,8 +43,9 @@ export default function ScanIPs() {
             color="initial"
             sx={{ textAlign: "center", mt: 2 }}
           >
-            Scan configuration is available in Pro plan. Please <br /> consider
-            upgrading to enable this feature.
+            Scan IPs gives you greater control over your scanning <br /> infrastructure
+            by providing a static set of IP <br /> addresses. Upgrade your account to
+            access this <br /> feature.
           </Typography>
           <Button
             variant="contained"
@@ -54,6 +55,7 @@ export default function ScanIPs() {
           >
             Talk to sales
           </Button>
+          a
         </Box>
       </Box>
     </Box>

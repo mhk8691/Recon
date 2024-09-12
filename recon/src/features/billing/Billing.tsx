@@ -1,9 +1,11 @@
-import { Box, Button, ButtonGroup, Typography } from "@mui/material";
+import { Box, Button, Slider, Typography } from "@mui/material";
 import DoneIcon from "@mui/icons-material/Done";
+import { useState } from "react";
 
 export default function Billing() {
+  const [value, setValue] = useState<number>(2);
   return (
-    <Box display={"flex"} gap={2} width={"70%"}>
+    <Box display={"flex"} gap={2} width={"70%"} mb={4}>
       <Box
         border={1}
         borderColor={"#18181B"}
@@ -18,10 +20,10 @@ export default function Billing() {
           </Typography>
         </Box>
         <Typography variant="body2" color="#93939B" sx={{ mt: 1 }}>
-          Scan configuration is available
+          For power individuals and smaller teams
         </Typography>
         <Typography variant="h5" color="initial" sx={{ mt: 1 }}>
-          $100
+          {value * 50}
           <Typography
             variant="body2"
             color="#93939B"
@@ -31,6 +33,7 @@ export default function Billing() {
             /month
           </Typography>
         </Typography>
+
         <Button
           variant="contained"
           color="inherit"
@@ -40,6 +43,24 @@ export default function Billing() {
         >
           Upgrade to Pro
         </Button>
+        <Typography
+          variant="body2"
+          color="#93939B"
+          sx={{ mt: 3, textAlign: "center", fontSize: ".8rem" }}
+        >
+          {value}K Scanning your most critical assets
+        </Typography>
+        <Slider
+          defaultValue={50}
+          aria-label="Default"
+          valueLabelDisplay="auto"
+          sx={{ color: "#6366F1" }}
+          value={value}
+          onChange={(e, v) => setValue(v)}
+          step={2}
+          max={20}
+          min={2}
+        />
         <hr style={{ marginTop: "2rem", borderColor: "#18181A" }} />
         <Typography variant="body2" color="white" sx={{ mt: 2 }}>
           Pro includes
@@ -50,7 +71,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Cloud hosted scans (50x faster)
         </Typography>
         <Typography
           variant="body2"
@@ -58,7 +79,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Asset discovery and cloud import
         </Typography>
         <Typography
           variant="body2"
@@ -66,7 +87,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Up to 10 team members
         </Typography>
         <Typography
           variant="body2"
@@ -74,7 +95,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          2,000 monthly scan tokens
         </Typography>
         <Typography
           variant="body2"
@@ -82,7 +103,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Integrate with Slack, Jira, GitLab.
         </Typography>
         <Typography
           variant="body2"
@@ -90,7 +111,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          1-year data retention
         </Typography>
       </Box>
       <Box
@@ -106,7 +127,7 @@ export default function Billing() {
           </Typography>
         </Box>
         <Typography variant="body2" color="#93939B" sx={{ mt: 1 }}>
-          Scan configuration is available
+          For larger attack surfaces, larger teams, or custom scan requirements.
         </Typography>
 
         <Button
@@ -117,7 +138,7 @@ export default function Billing() {
           sx={{
             bgcolor: "#18181B",
             color: "white",
-            mt: 7,
+            mt: 4,
           }}
         >
           Talk to sales
@@ -129,9 +150,9 @@ export default function Billing() {
         >
           Scanning of 500+ assets
         </Typography>
-        <hr style={{ marginTop: "2rem", borderColor: "#18181A" }} />
+        <hr style={{ marginTop: "4.2rem", borderColor: "#18181A" }} />
         <Typography variant="body2" color="white" sx={{ mt: 2 }}>
-          Pro includes
+          Everything in Pro, plus:
         </Typography>
         <Typography
           variant="body2"
@@ -139,7 +160,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Custom Scan Limits
         </Typography>
         <Typography
           variant="body2"
@@ -147,7 +168,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          10+ Team Members
         </Typography>
         <Typography
           variant="body2"
@@ -155,7 +176,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          SAML SSO
         </Typography>
         <Typography
           variant="body2"
@@ -163,7 +184,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Fixed Scan IPs
         </Typography>
         <Typography
           variant="body2"
@@ -171,7 +192,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Custom Data Retention Limits
         </Typography>
         <Typography
           variant="body2"
@@ -179,7 +200,7 @@ export default function Billing() {
           sx={{ mt: 1, display: "flex", alignItems: "center" }}
         >
           <DoneIcon sx={{ color: "#707AD6", mr: 1 }} />
-          Scan configuration is available
+          Support
         </Typography>
       </Box>
     </Box>
