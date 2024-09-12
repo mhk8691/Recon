@@ -1,4 +1,4 @@
-import { TabType } from "./Tab.types";
+import { TabType } from "../../ui/Tab.types";
 export const tabObject: Array<TabType> = [
   {
     text: "Assets Groups",
