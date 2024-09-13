@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
       <Modal open={open} handleClose={handleClose} />
-      <nav style={navStyle}> 
+      <nav style={navStyle}>
         <Box
           component={Link}
           to={"/"}
@@ -138,13 +138,21 @@ export default function Navbar() {
                 </Button>
               </Box>
               <hr style={{ borderColor: "#27272A" }} />
-              <Box py={1} px={2}>
+              <Box py={1} px={1}>
                 <Typography
                   variant="body2"
                   color="#9898A1"
                   component={Link}
                   to=""
-                  sx={{ mt: 0.5, display: "block" }}
+                  sx={{
+                    py: 1,
+                    px: 1,
+                    display: "block",
+                    "&:hover": {
+                      bgcolor: "#141416",
+                      borderRadius:1
+                    },
+                  }}
                   onClick={handleOpen}
                 >
                   API key
@@ -154,7 +162,14 @@ export default function Navbar() {
                   color="#9898A1"
                   component={Link}
                   to="settings"
-                  sx={{ mt: 1, display: "block" }}
+                  sx={{
+                    py: 1,
+                    px: 1,
+                    display: "block",
+                    "&:hover": {
+                      bgcolor: "#141416",
+                    },
+                  }}
                   onClick={() => setMenu(false)}
                 >
                   Settings
@@ -165,7 +180,14 @@ export default function Navbar() {
                   component={"a"}
                   href="https://projectdiscovery.io/terms"
                   target="_blank"
-                  sx={{ mt: 1, display: "block" }}
+                  sx={{
+                    py: 1,
+                    px: 1,
+                    display: "block",
+                    "&:hover": {
+                      bgcolor: "#141416",
+                    },
+                  }}
                   onClick={() => setMenu(false)}
                 >
                   Terms
@@ -175,7 +197,14 @@ export default function Navbar() {
                   color="#9898A1"
                   component={Link}
                   to=""
-                  sx={{ mt: 1, display: "block" }}
+                  sx={{
+                    py: 1,
+                    px: 1,
+                    display: "block",
+                    "&:hover": {
+                      bgcolor: "#141416",
+                    },
+                  }}
                   onClick={() => setMenu(false)}
                 >
                   Logout
