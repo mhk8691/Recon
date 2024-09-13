@@ -25,7 +25,7 @@ export default function Navbar() {
   return (
     <>
       <Modal open={open} handleClose={handleClose} />
-      <nav style={navStyle}>
+      <nav style={navStyle}> 
         <Box
           component={Link}
           to={"/"}
