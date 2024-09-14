@@ -88,13 +88,21 @@ function LineAssets() {
 
 export default function Filter() {
   return (
-    <Container maxWidth={"xl"} sx={{ display: "flex", mt: 2,justifyContent  : "space-between",alignItems:"center" }}>
+    <Container
+      maxWidth={"xl"}
+      sx={{
+        display: "flex",
+        mt: 2,
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
       {FilterObject.map((item, index) => (
         <Box
           key={index}
           borderRadius={2}
           border={1}
-          sx={{ borderColor: "#404040", width: "250px", marginRight: "1rem" }}
+          sx={{ borderColor: "#404040", width: "250px" }}
         >
           <Box
             display={"flex"}

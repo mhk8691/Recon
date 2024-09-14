@@ -20,16 +20,20 @@ import DataObjectIcon from "@mui/icons-material/DataObject";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import IosShareIcon from "@mui/icons-material/IosShare";
-function Row(props: { row: ReturnType<typeof createData> }) {
+function Row(props: {
+  row: ReturnType<typeof createData>;
+  handleOpen: (id: string) => void;
+  open: string | undefined;
+}) {
   const { row } = props;
-  const [open, setOpen] = React.useState(false);
+
   const [checked, setChecked] = React.useState(false);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(event.target.checked);
   };
   return (
     <React.Fragment>
-      <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
+      <TableRow sx={{ "& > *": { borderBottom: "unset" } ,cursor:"pointer"}} onClick={() => props.handleOpen(row.id)}>
         <TableCell>
           <Checkbox
             checked={checked}
@@ -42,7 +46,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             }}
           />
         </TableCell>
-        <TableCell align="left" sx={{ color: "white" }} width={500}>
+        <TableCell align="left" sx={{ color: "white" }} width={420}>
           <Typography
             variant="body2"
             component={"span"}
@@ -56,11 +60,9 @@ function Row(props: { row: ReturnType<typeof createData> }) {
           >
             {row.level}
           </Typography>
-          <Typography variant="body2" component={"span"} sx={{ ml: 3 }}>
+          <Typography variant="body2" component={"span"} sx={{ ml: 1 }}>
             {row.title}
           </Typography>
-        </TableCell>
-        <TableCell align="left">
           <Typography
             variant="body2"
             component={"span"}
@@ -71,11 +73,13 @@ function Row(props: { row: ReturnType<typeof createData> }) {
               py: 0.2,
               borderRadius: "40%",
               border: "1px solid #27272A",
+              ml: 2,
             }}
           >
             {row.count}
           </Typography>
         </TableCell>
+
         <TableCell align="right" sx={{ color: "white" }}>
           <Typography
             variant="body2"
@@ -91,23 +95,23 @@ function Row(props: { row: ReturnType<typeof createData> }) {
             <span style={{ backgroundColor: "#09090B", padding: "2px" }}>
               TEMPLATE
             </span>{" "}
-            {row.description}
+            <span style={{ fontSize: ".7rem" }}>{row.description}</span>
           </Typography>
         </TableCell>
         <TableCell>
           <IconButton
             aria-label="expand row"
             size="small"
-            onClick={() => setOpen(!open)}
+            onClick={() => props.handleOpen(row.id)}
             sx={{ color: "white" }}
           >
-            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+            {props.open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
-          <Collapse in={open} timeout="auto" unmountOnExit>
+          <Collapse in={props.open === row.id} timeout="auto" unmountOnExit>
             <Box sx={{ margin: 1 }}>
               <Table size="small" aria-label="purchases">
                 <TableHead>
@@ -192,13 +196,21 @@ function Row(props: { row: ReturnType<typeof createData> }) {
   );
 }
 
-export default function CollapsibleTable() {
+export default function CollapsibleTable({ handleOpen, open } : { handleOpen: (id: string) => void, open: string | undefined }) {
   return (
-    <TableContainer component={Paper} sx={{ mt: 2 }}>
-      <Table aria-label="collapsible table" size="small">
+    <TableContainer component={Paper} sx={{ mt: 2, maxHeight: "400px" }}>
+      <Table
+        aria-label="collapsible table"
+        size="small"
+      >
         <TableBody sx={{ bgcolor: "#0D0D0F" }}>
           {rows.map((row) => (
-            <Row key={row.title} row={row} />
+            <Row
+              key={row.title}
+              row={row}
+              handleOpen={handleOpen}
+              open={open}
+            />
           ))}
         </TableBody>
       </Table>

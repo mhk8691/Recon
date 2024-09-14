@@ -1,4 +1,5 @@
 export function createData(
+  id: string,
   level: string,
   title: string,
   count: number,
@@ -8,9 +9,11 @@ export function createData(
     FirstSeen?: string;
     LastSeen?: string;
     FoundAt?: string;
+    id: string;
   }[]
 ) {
   return {
+    id,
     level,
     title,
     count,
@@ -20,20 +23,30 @@ export function createData(
 }
 export const rows = [
   createData(
+    "1",
     "Critical",
     "Jelly Template Injection on ServiceNow",
     1,
-    "TEMPLATECVE-2023-23333-RCE",
+    "Template-Injection-on-Service",
     []
   ),
-  createData("High", "CVE - 2023 - 23333;", 1, "CVE - 2023 - 23333 - RCE", [
-    {
-      Assets: "www.givenchybeauty.com",
-    },
-  ]),
   createData(
+    "2",
+    "High",
+    "CVE - 2023 - 23333;",
+    1,
+    "CVE - 2023 - 23333 - RCE",
+    [
+      {
+        Assets: "www.givenchybeauty.com",
+        id:'1'
+      },
+    ]
+  ),
+  createData(
+    "3",
     "Medium",
-    "Microsoft FrontPage Extensions Check (shtml.dll)",
+    "Microsoft FrontPage Extensions Check ",
     8,
     "CVE-2000-0114",
     [
@@ -42,10 +55,12 @@ export const rows = [
         FoundAt:
           "https://www.givenchybeauty.com/int/en/downloader.php?redirect&file=%3Bid%00.zip",
         FirstSeen: "28d ago",
+        id:'2'
       },
     ]
   ),
   createData(
+    "4",
     "Low",
     "SSH Server CBC Mode Ciphers Enabled",
     3,
@@ -56,16 +71,19 @@ export const rows = [
         FoundAt: "https://www.sfl.ca/_vti_inf.html",
         FirstSeen: "2mo ago",
         LastSeen: "2mo ago",
+        id:'3'
       },
       {
         Assets: "www.rcd-dgp.com",
         FirstSeen: "2mo ago",
         LastSeen: "2mo ago",
         FoundAt: "https://www.rcd-dgp.com/_vti_inf.html",
+        id:'4'
       },
     ]
   ),
   createData(
+    "5",
     "Unknown",
     "Symfony _fragment - Detect",
     2,
