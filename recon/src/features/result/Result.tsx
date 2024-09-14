@@ -1,5 +1,9 @@
+import { Box } from "@mui/material";
+import Table from './Table'
 export default function Result() {
   return (
-    <div>Result</div>
+    <Box>
+      <Table/>
+    </Box>
   )
 }

@@ -10,25 +10,25 @@ import CloseIcon from "@mui/icons-material/Close";
 import { rows } from "./Data";
 import { Typography } from "@mui/material";
 
-function colorCalculator(severity: string): Array<string> {
+export function colorCalculator(severity: string): Array<string> {
   let color: string = "#F5A623";
   let backgroundColor: string = "#F5A623";
-  if (severity === "LOW") {
+  if (severity === "LOW" || severity === "Low") {
     color = "#717BDB";
     backgroundColor = "#1B1B39";
-  } else if (severity === "MEDIUM") {
+  } else if (severity === "MEDIUM" || severity === "Medium") {
     color = "#FBBF24";
     backgroundColor = "#38270B";
-  } else if (severity === "HIGH") {
+  } else if (severity === "HIGH" || severity === "High") {
     color = "#E68537";
     backgroundColor = "#391E0D";
-  } else if (severity === "CRITICAL") {
+  } else if (severity === "CRITICAL"  || severity === "Critical") {
     color = "#C25758";
     backgroundColor = "#371517";
   } else if (severity === "INFO") {
     color = "#1FA351";
     backgroundColor = "#173425";
-  } else if (severity === "UNKNOWN") {
+  } else if (severity === "UNKNOWN" || severity === "Unknown") {
     color = "#D5D5D6";
     backgroundColor = "#27272A";
   }
