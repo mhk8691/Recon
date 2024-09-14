@@ -163,11 +163,15 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                       </TableCell>
                       <TableCell sx={{ color: "#93939C" }}>
                         <Box display={"flex"} alignItems={"center"}>
-                          <ContentCopyIcon fontSize="small" />
-                          <IosShareIcon fontSize="small" />
-                          <span style={{ marginLeft: ".5rem" }}>
-                            {historyRow.FoundAt}
-                          </span>
+                          {historyRow.FoundAt && (
+                            <>
+                              <ContentCopyIcon fontSize="small" />
+                              <IosShareIcon fontSize="small" />
+                              <span style={{ marginLeft: ".5rem" }}>
+                                {historyRow.FoundAt}
+                              </span>
+                            </>
+                          )}
                         </Box>
                       </TableCell>
                       <TableCell sx={{ color: "white" }} align="left">
