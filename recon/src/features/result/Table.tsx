@@ -216,7 +216,10 @@ function Row(props: {
                             <>
                               <ContentCopyIcon
                                 fontSize="small"
-                                sx={{ fontSize: ".9rem" }}
+                                sx={{ fontSize: ".9rem",cursor:'pointer' }}
+                                onClick={()=>{
+                                  navigator.clipboard.writeText(historyRow.FoundAt+'')
+                                }}
                               />
                               <IosShareIcon
                                 fontSize="small"

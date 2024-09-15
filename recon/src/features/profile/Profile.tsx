@@ -6,10 +6,10 @@ export default function Profile() {
       <Box
         border={1}
         borderColor={"#27272A"}
+        bgcolor="#101013"
         borderRadius={2}
-        bgcolor={"#101013"}
       >
-        <Box p={3} bgcolor="#101013">
+        <Box p={3}>
           <Typography variant="body2" color="initial">
             Username
           </Typography>
@@ -42,6 +42,7 @@ export default function Profile() {
           px={3}
           py={1}
           bgcolor="#09090B"
+          sx={{ borderEndEndRadius: "8px", borderEndStartRadius: "8px" }}
         >
           <Typography
             variant="body2"
@@ -60,8 +61,14 @@ export default function Profile() {
           </Button>
         </Box>
       </Box>
-      <Box border={1} borderColor={"#27272A"} borderRadius={2} mt={3}>
-        <Box p={3} bgcolor={"#101013"}>
+      <Box
+        border={1}
+        borderColor={"#27272A"}
+        bgcolor="#101013"
+        borderRadius={2}
+        mt={3}
+      >
+        <Box p={3}>
           <Typography variant="body2" color="initial">
             Email address
           </Typography>
@@ -94,6 +101,7 @@ export default function Profile() {
           justifyContent="space-between"
           px={3}
           py={1}
+          sx={{ borderEndEndRadius: "8px", borderEndStartRadius: "8px" }}
         >
           <Typography
             variant="body2"
@@ -112,8 +120,14 @@ export default function Profile() {
           </Button>
         </Box>
       </Box>
-      <Box border={1} borderColor={"#712628"} borderRadius={2} mt={3}>
-        <Box p={3} bgcolor={"#101013"}>
+      <Box
+        border={1}
+        borderColor={"#712628"}
+        bgcolor={"#101013"}
+        borderRadius={2}
+        mt={3}
+      >
+        <Box p={3}>
           <Typography variant="body2" color="initial">
             Delete Account
           </Typography>
@@ -133,6 +147,7 @@ export default function Profile() {
           px={3}
           py={1.5}
           bgcolor="#3D1B1D"
+          sx={{ borderEndEndRadius: "8px", borderEndStartRadius: "8px" }}
         >
           <Typography
             variant="body2"

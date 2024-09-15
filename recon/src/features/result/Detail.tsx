@@ -183,7 +183,15 @@ function DetailTable({
             />
             <ContentCopyOutlinedIcon
               fontSize="small"
-              sx={{ mr: 1, color: "#8D8D95" }}
+              sx={{
+                mr: 1,
+                color: "#8D8D95",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+              onClick={() => {
+                navigator.clipboard.writeText("142.195.73.157:22");
+              }}
             />
           </Box>
         </Box>
@@ -218,7 +226,15 @@ function DetailTable({
             />
             <ContentCopyOutlinedIcon
               fontSize="small"
-              sx={{ mr: 1, color: "#8D8D95" }}
+              sx={{
+                mr: 1,
+                color: "#8D8D95",
+                cursor: "pointer",
+                fontSize: "1rem",
+              }}
+              onClick={() => {
+                navigator.clipboard.writeText("Vulnerable to Terrapin");
+              }}
             />
           </Box>
         </Box>
@@ -323,7 +339,10 @@ function DetailTable({
               />
               <ContentCopyIcon
                 fontSize="small"
-                sx={{ fontSize: "1rem", ml: ".2rem" }}
+                sx={{ fontSize: "1rem", ml: ".2rem", cursor: "pointer" }}
+                onClick={() => {
+                  navigator.clipboard.writeText("CVE-2023-48795");
+                }}
               />
             </Typography>
           </Box>
@@ -353,7 +372,10 @@ function DetailTable({
               />
               <ContentCopyIcon
                 fontSize="small"
-                sx={{ fontSize: "1rem", ml: ".2rem" }}
+                sx={{ fontSize: "1rem", ml: ".2rem", cursor: "pointer" }}
+                onClick={() => {
+                  navigator.clipboard.writeText("cq9hbulvjq5s1t5b7lh0");
+                }}
               />
             </Typography>
           </Box>
@@ -383,7 +405,10 @@ function DetailTable({
               />
               <ContentCopyIcon
                 fontSize="small"
-                sx={{ fontSize: "1rem", ml: ".2rem" }}
+                sx={{ fontSize: "1rem", ml: ".2rem", cursor: "pointer" }}
+                onClick={() => {
+                  navigator.clipboard.writeText("cq9haocls3us73ft9opg");
+                }}
               />
             </Typography>
           </Box>
@@ -477,8 +502,7 @@ function DetailTable({
         </Box>
       </Box>
     );
-  }
-  else{
+  } else {
     return (
       <Box
         display={"flex"}

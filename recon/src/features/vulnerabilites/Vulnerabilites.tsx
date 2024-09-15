@@ -2,11 +2,11 @@ import { Box, Chip, Typography, Button, Modal } from "@mui/material";
 import RadarIcon from "@mui/icons-material/Radar";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { vulnerabilitiesList } from "./Vulnerabilites.list";
+import { Data } from "./Data";
 import Search from "../../ui/Search";
 import { Vulnerability } from "./Vulnerabilites.types";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import {  solarizedlight } from "react-syntax-highlighter/dist/esm/styles/prism";
 const style = {
   position: "absolute" as "absolute",
   top: "50%",
@@ -17,6 +17,25 @@ const style = {
   p: 4,
   borderRadius: "1rem",
   borderColor: "red",
+};
+const scanButtonStyle = {
+  fontSize: ".7rem",
+  padding: "0",
+  color: "white",
+  borderColor: "#333333",
+  bgcolor: "#171717",
+  py: ".2rem",
+  px: ".3rem",
+  ml: 2.5,
+  borderRadius: "7px",
+  transition: ".3s ease",
+  "&:hover": {
+    backgroundColor: "#6366F1",
+    color: "white",
+    borderColor: "#6366F1",
+    boxShadow: "none",
+    transform: "scale(1.1)",
+  },
 };
 
 function colorCalculator(level: string): Array<string> {
@@ -40,8 +59,7 @@ function colorCalculator(level: string): Array<string> {
 
 export default function Vulnerabilites() {
   const [query, setQuery] = useState("");
-  const [queryResult, setQueryResult] =
-    useState<Array<Vulnerability>>(vulnerabilitiesList);
+  const [queryResult, setQueryResult] = useState<Array<Vulnerability>>(Data);
   const [oneVulnerability, setOneVulnerability] = useState<Vulnerability>();
   const [open, setOpen] = useState(false);
 
@@ -51,7 +69,7 @@ export default function Vulnerabilites() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setQueryResult(
-      vulnerabilitiesList.filter((vulnerability) =>
+      Data.filter((vulnerability) =>
         vulnerability.title.toLowerCase().includes(query.toLowerCase())
       )
     );
@@ -59,7 +77,7 @@ export default function Vulnerabilites() {
   function handleOpen(id: number) {
     setOpen(true);
     setOneVulnerability(
-      vulnerabilitiesList.find((vulnerability) => vulnerability.id === id)
+      Data.find((vulnerability) => vulnerability.id === id)
     );
   }
   function handleClose() {
@@ -144,25 +162,7 @@ export default function Vulnerabilites() {
                 <Button
                   variant="outlined"
                   size="small"
-                  sx={{
-                    fontSize: ".7rem",
-                    padding: "0",
-                    color: "white",
-                    borderColor: "#333333",
-                    bgcolor: "#171717",
-                    py: ".2rem",
-                    px: ".3rem",
-                    ml: 2.5,
-                    borderRadius: "7px",
-                    transition: ".3s ease",
-                    "&:hover": {
-                      backgroundColor: "#6366F1",
-                      color: "white",
-                      borderColor: "#6366F1",
-                      boxShadow: "none",
-                      transform: "scale(1.1)",
-                    },
-                  }}
+                  sx={scanButtonStyle}
                   color="primary"
                   startIcon={<RadarIcon />}
                 >
@@ -222,12 +222,11 @@ export default function Vulnerabilites() {
                 </Box>
                 <Box>
                   <Button
-                    variant="contained"
-                    startIcon={<RadarIcon />}
+                    variant="outlined"
                     size="small"
-                    sx={{ ml: 2.5 }}
-                    component={Link}
-                    to="/vulnerabilities/scan"
+                    sx={scanButtonStyle}
+                    color="primary"
+                    startIcon={<RadarIcon />}
                   >
                     scan
                   </Button>
@@ -246,9 +245,16 @@ export default function Vulnerabilites() {
                   {oneVulnerability?.author}
                 </span>
               </Typography>
-              <SyntaxHighlighter language="javascript" style={dark}>
-                {oneVulnerability?.code + ""}
-              </SyntaxHighlighter>
+
+              <Box width={"700px"} height={"300px"} overflow={"auto"}>
+                <SyntaxHighlighter
+                  language="javascript"
+                  style={solarizedlight}
+                  customStyle={{ backgroundColor: "black", fontSize: ".8rem" }}
+                >
+                  {oneVulnerability?.code + ""}
+                </SyntaxHighlighter>
+              </Box>
             </Box>
           </Modal>
         </main>
