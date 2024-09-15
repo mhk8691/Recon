@@ -2,7 +2,7 @@ import { Button, Container } from "@mui/material";
 import Title from "../../ui/Title";
 import Filter from "./Filter";
 import Sort from "./Sort";
-import ScanList from "./ScanList";
+import ScanList from "./Table";
 import Footer from "../../Footer";
 import AddButton from "../../ui/AddButton";
 

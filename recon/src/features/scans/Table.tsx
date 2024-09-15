@@ -23,7 +23,8 @@ const bodyStyle: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
   padding: ".1rem 0",
-  marginTop: "1rem",
+  paddingTop: "1rem",
+  cursor: "pointer",
 };
 const ITEM_HEIGHT = 48;
 export default function AssetsList() {
@@ -76,6 +77,9 @@ export default function AssetsList() {
           key={index}
           sx={{
             borderBottom: "1px solid #3F3F46",
+            "&:hover": {
+              bgcolor: "#141414",
+            },
           }}
           style={bodyStyle}
         >
@@ -214,7 +218,7 @@ export default function AssetsList() {
           <Typography
             variant="body2"
             color="#808087"
-            sx={{ fontSize: ".8rem",ml:18 }}
+            sx={{ fontSize: ".8rem", ml: 18 }}
           >
             {assets.last_updated}
           </Typography>
@@ -227,7 +231,7 @@ export default function AssetsList() {
               aria-expanded={open ? "true" : undefined}
               aria-haspopup="true"
               onClick={handleClick}
-              sx={{ color: "#9898A1",ml:8 }}
+              sx={{ color: "#9898A1", ml: 8 }}
             >
               <MoreVertIcon sx={{ fontSize: "1.3rem" }} />
             </IconButton>

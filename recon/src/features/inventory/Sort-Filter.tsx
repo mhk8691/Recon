@@ -224,7 +224,7 @@ export default function SortFilter() {
       justifyContent={"space-between"}
       alignItems={"center"}
     >
-      <Box display={"flex"} gap={.5} mt={4} >
+      <Box display={"flex"} gap={0.5} mt={4}>
         <Date hasFilter={true} />
         <Select
           object={{
@@ -356,18 +356,19 @@ export default function SortFilter() {
           </Typography>
         </Button>
         <BasicMenu />
-
-        <Button
-          variant="contained"
-          size="small"
+        <Box
+          component={"span"}
           sx={{
             bgcolor: "#2C2C2C",
             fontSize: ".6rem",
             color: "#A8A8A9",
+            p: 0.3,
+            borderRadius: "5px",
+            cursor: "pointer",
           }}
         >
           <CachedOutlinedIcon fontSize="small" />
-        </Button>
+        </Box>
       </Box>
     </Box>
   );

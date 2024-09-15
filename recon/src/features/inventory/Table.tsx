@@ -7,6 +7,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { rows } from "./Data";
 import Menu from "./Menu";
+import { useState } from "react";
+import { Box } from "@mui/material";
 export default function BasicTable() {
   return (
     <>
@@ -84,19 +86,26 @@ export default function BasicTable() {
               >
                 LAST SEEN
               </TableCell>
-              <TableCell align="right" width={'5%'}> </TableCell>
+              <TableCell align="right" width={"5%"}>
+                {" "}
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody sx={{ bgcolor: "#0E0E12", overflowX: "auto" }}>
             {rows.map((row) => (
               <TableRow
                 key={row.HOST.ip}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                sx={{
+                  "&:last-child td, &:last-child th": { border: 0 },
+                  "&:hover": {
+                    backgroundColor: "#18181B",
+                  },
+                }}
               >
                 <TableCell
                   component="th"
                   scope="row"
-                  style={{
+                  sx={{
                     color: "#8C8C94",
                     backgroundColor: "#121215",
                   }}
@@ -123,7 +132,9 @@ export default function BasicTable() {
                         <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
                       </svg>
                     </span>
-                    <span style={{ marginLeft: ".3rem" }}>{row.HOST.ip}</span>
+                    <span style={{ marginLeft: ".3rem", fontSize: ".8rem" }}>
+                      {row.HOST.ip}
+                    </span>
                   </span>
 
                   <span
@@ -141,7 +152,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell
                   align="right"
-                  style={{
+                  sx={{
                     color: "#8C8C94",
                   }}
                 >
@@ -158,8 +169,9 @@ export default function BasicTable() {
                   </span>
                 </TableCell>
                 <TableCell align="right" style={{ color: "#8C8C94" }}>
-                  <span
-                    style={{
+                  <Box
+                    component={"span"}
+                    sx={{
                       fontSize: ".7rem",
                       backgroundColor: "#161619",
                       padding: ".1rem .2rem",
@@ -168,7 +180,7 @@ export default function BasicTable() {
                     }}
                   >
                     {row.IP}
-                  </span>
+                  </Box>
                 </TableCell>
                 <TableCell align="right" style={{ color: "#8C8C94" }}>
                   {row.TECHNOLOGIES.map((tech) => (

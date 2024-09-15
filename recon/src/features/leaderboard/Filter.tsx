@@ -2,7 +2,7 @@ import { Box, Grid2 as Grid, Typography, Button } from "@mui/material";
 import Search from "../../ui/Search";
 import { useState } from "react";
 export default function Filter() {
-  const [active, setActive] = useState<number | null>(null);
+  const [active, setActive] = useState<number | null>(1);
   return (
     <Box mt={5}>
       <Typography variant="body1" color="initial">
@@ -22,8 +22,17 @@ export default function Filter() {
               handleSubmit={(e) => {
                 e.preventDefault();
               }}
-              formStyle={{ width: "100%" }}
+              hasIcon={false}
+              formStyle={{
+                width: "100%",
+                border: "1px solid #27272A",
+                padding: ".2rem",
+              }}
               placeholder="Search contributor"
+              style={{
+                backgroundColor: "#09090B",
+                border: "none",
+              }}
             />
           </Box>
         </Grid>

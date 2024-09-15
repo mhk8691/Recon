@@ -7,6 +7,7 @@ export default function Search({
   style,
   formStyle,
   placeholder,
+  hasIcon=true,
 }: {
   handleSubmit?: (e: React.FormEvent<HTMLFormElement>) => void;
   handleChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
@@ -14,6 +15,7 @@ export default function Search({
   style?: React.CSSProperties;
   formStyle?: React.CSSProperties;
   placeholder: string;
+  hasIcon?: boolean;
 }) {
   return (
     <header className={styles.header}>
@@ -32,7 +34,9 @@ export default function Search({
           id=""
           style={style}
         />
-        <SearchIcon fontSize="small" sx={{ marginRight: ".3rem" }} />
+        {hasIcon && (
+          <SearchIcon fontSize="small" sx={{ marginRight: ".3rem" }} />
+        )}
       </form>
     </header>
   );

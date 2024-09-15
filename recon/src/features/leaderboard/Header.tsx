@@ -6,10 +6,6 @@ const boxStyle = {
   py: 2.5,
   px: 2,
   borderRadius: ".5rem",
-  cursor: "pointer",
-  "&:hover": {
-    borderColor: "#39393d",
-  },
 };
 const iconStyle = {
   borderRadius: "5px",

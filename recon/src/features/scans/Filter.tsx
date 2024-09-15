@@ -19,7 +19,7 @@ const iconStyle = {
 };
 
 export default function Filter() {
-  const [acitve, setActive] = useState<number | null>(null);
+  const [acitve, setActive] = useState<number | null>(1);
   return (
     <Box mt={5}>
       <Grid container spacing={1}>

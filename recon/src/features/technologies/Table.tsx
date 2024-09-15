@@ -402,13 +402,15 @@ export default function CollapsibleTable() {
       >
         <TableHead>
           <TableRow>
-            <TableCell sx={{ color: "#7A7A7B", bgcolor: "#19191A" }} width="35%">
+            <TableCell
+              sx={{ color: "#7A7A7B", bgcolor: "#19191A" }}
+              width="35%"
+            >
               TECHNOLOGY
             </TableCell>
             <TableCell
               sx={{ color: "#7A7A7B", bgcolor: "#141414" }}
               align="left"
-              
             >
               DESCRIPTION
             </TableCell>
@@ -417,7 +419,7 @@ export default function CollapsibleTable() {
             <TableCell sx={{ bgcolor: "#141414" }} />
           </TableRow>
         </TableHead>
-        <TableBody>
+        <TableBody >
           {rows.map((row) => (
             <Row key={row.technology.name} row={row} />
           ))}
