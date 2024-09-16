@@ -9,7 +9,7 @@ import DoneIcon from "@mui/icons-material/Done";
 import CloseIcon from "@mui/icons-material/Close";
 import { rows } from "./Data";
 import { Typography } from "@mui/material";
-
+import {Link} from 'react-router-dom'
 export function colorCalculator(severity: string): Array<string> {
   let color: string = "#F5A623";
   let backgroundColor: string = "#F5A623";
@@ -116,6 +116,8 @@ export default function BasicTable() {
           {rows.map((row) => (
             <TableRow
               key={row.title}
+              component={Link}
+              to={`/templates/vulns`}
               sx={{
                 "&:last-child td, &:last-child th": { border: 0 },
                 "&:hover": {

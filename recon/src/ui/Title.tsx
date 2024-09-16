@@ -1,10 +1,11 @@
-import { Box, Typography} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 type Title = {
   title: string;
   description: string;
   children?: React.ReactNode;
+  style?: React.CSSProperties;
 };
-export default function Header({ title, description, children }: Title) {
+export default function Header({ title, description, children, style }: Title) {
   return (
     <Box
       mt={10}
@@ -24,7 +25,7 @@ export default function Header({ title, description, children }: Title) {
           {description}
         </Typography>
       </Box>
-      <Box>{children}</Box>
+      <Box style={style}>{children}</Box>
     </Box>
   );
 }

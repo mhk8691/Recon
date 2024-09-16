@@ -19,6 +19,7 @@ import Team from "./features/team/Team";
 import ScanIPs from "./features/scan-ips/Scan-IPs";
 import Security from "./features/security/Security";
 import Billing from "./features/billing/Billing";
+import Vulns from "./features/vulns/Vulns";
 
 export default function App() {
   return (
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="/templates/history" element={<Historty />} />
             <Route path="/templates/leaderboard" element={<Leaderboard />} />
             <Route path="/templates/feed" element={<Configs />} />
+            <Route path="/templates/vulns" element={<Vulns />} />
           </Route>
           <Route path="/settings" element={<SettingsPage />}>
             <Route index element={<Profile />} />
