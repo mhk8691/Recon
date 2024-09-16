@@ -4,11 +4,12 @@ type Title = {
   description: string;
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  margin: number;
 };
-export default function Header({ title, description, children, style }: Title) {
+export default function Header({ title, description, children, style, margin }: Title) {
   return (
     <Box
-      mt={10}
+      mt={margin}
       display={"flex"}
       alignItems={"center"}
       justifyContent={"space-between"}

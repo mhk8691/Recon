@@ -265,7 +265,7 @@ export default function CollapsibleTable({
   return (
     <TableContainer
       component={Paper}
-      sx={{ mt: 2, maxHeight: "400px", border: "none" }}
+      sx={{ mt: 0, maxHeight: "400px", border: "none" }}
     >
       <Table aria-label="collapsible table" size="small">
         <TableBody sx={{ bgcolor: "#0D0D0F"}}>

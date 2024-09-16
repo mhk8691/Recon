@@ -15,7 +15,7 @@ export default function Result() {
   return (
     <Box>
       <Filter />
-      <Grid container spacing={0.5} mt={5} sx={{ border: "1px solid #27272A" }}>
+      <Grid container spacing={0.5} mt={2} sx={{ border: "1px solid #27272A" }}>
         <Grid size={7.5}>
           <Box>
             <Sort />
@@ -32,7 +32,7 @@ export default function Result() {
                 <Typography
                   variant="body2"
                   color="#909099"
-                  sx={{ fontSize: ".8rem", mb: 2 }}
+                  sx={{ fontSize: ".8rem" }}
                 >
                   15 templates
                 </Typography>

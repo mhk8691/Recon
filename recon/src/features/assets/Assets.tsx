@@ -16,6 +16,7 @@ export default function Assets() {
           title="Your Assets"
           description="Add Assets for scanning. Select an Asset Group to view all Assets in
           that group, or check out Inventory for a full Asset list."
+          margin={9}
         >
           <AddButton>Add New Assets</AddButton>
           <Button

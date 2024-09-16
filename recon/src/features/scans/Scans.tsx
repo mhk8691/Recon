@@ -51,6 +51,7 @@ export default function Scans() {
         <Title
           title="Your Scans"
           description="Browse scans, delve into their details, or initiate a new scan."
+          margin={0}
         >
           <AddButton>Create New Scan</AddButton>
           <Button
