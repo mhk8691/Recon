@@ -5,7 +5,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import GitHubIcon from "@mui/icons-material/GitHub";
 export default function Header({ fullWidth }: { fullWidth: boolean }) {
   return (
-    <Box sx={{ mt: 3 }} display={"flex"} alignItems={"center"}>
+    <Box sx={{ mt: 1 }} display={"flex"} alignItems={"center"}>
       <Box
         display={"flex"}
         alignItems={"center"}

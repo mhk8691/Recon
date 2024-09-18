@@ -13,7 +13,7 @@ export default function Templates() {
     <Grid container>
       {!fullWidth && (
         <Grid
-          size={3}
+          size={2.7}
           sx={{ borderRight: "1px solid #27272A", height: "81vh" }}
         >
           <Sidebar />
@@ -61,7 +61,7 @@ export default function Templates() {
           )}
         </Box>
       </Grid>
-      <Grid size={fullWidth ? 11.7 : 8.7} sx={{px:2}}>
+      <Grid size={fullWidth ? 11.7 : 9} sx={{ px: 2 }}>
         <Header fullWidth={fullWidth} />
         <Editor />
       </Grid>

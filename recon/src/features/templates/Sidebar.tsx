@@ -4,7 +4,7 @@ import Accordion from "./Accordion";
 import Search from "../../ui/Search";
 export default function Sidebar() {
   return (
-    <Box mt={3}>
+    <Box mt={1}>
       <Box sx={{ px: 2 }}>
         <Button
           variant="contained"
