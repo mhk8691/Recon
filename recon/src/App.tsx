@@ -43,7 +43,7 @@ export default function App() {
             <Route index element={<Templates />} />
             <Route path="/templates/history" element={<Historty />} />
             <Route path="/templates/leaderboard" element={<Leaderboard />} />
-            <Route path="/templates/feed" element={<Configs />} />
+            <Route path="/templates/feed" element={<Templates />} />
             <Route path="/templates/vulns" element={<Vulns />} />
           </Route>
           <Route path="/settings" element={<SettingsPage />}>
