@@ -59,7 +59,7 @@ export default function Navbar() {
           borderColor="#52525B"
           borderRadius="10px"
           padding="0.2rem"
-          marginLeft={5}
+          marginLeft={15}
         >
           {tab.map((item, index) => {
             return (
@@ -90,6 +90,19 @@ export default function Navbar() {
           })}
         </Box>
         <Box>
+          <Button
+            variant="outlined"
+            color="inherit"
+            size="medium"
+            sx={{
+              textTransform: "none",
+              borderColor: "#27272A",
+              marginRight: "1rem",
+              "&:hover": { bgcolor: "#27272A" },
+            }}
+          >
+            Feedback
+          </Button>
           <a href="/contact" style={{ color: "rgba(161, 161, 171)" }}>
             Changelog
           </a>
@@ -150,7 +163,7 @@ export default function Navbar() {
                     display: "block",
                     "&:hover": {
                       bgcolor: "#141416",
-                      borderRadius:1
+                      borderRadius: 1,
                     },
                   }}
                   onClick={handleOpen}
