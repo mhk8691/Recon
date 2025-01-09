@@ -4,9 +4,9 @@ type Title = {
   description: string;
   children?: React.ReactNode;
   style?: React.CSSProperties;
-  margin: number;
+  margin?: number;
 };
-export default function Header({ title, description, children, style, margin }: Title) {
+export default function Title({ title, description, children, style, margin }: Title) {
   return (
     <Box
       mt={margin}

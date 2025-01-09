@@ -7,7 +7,6 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { rows } from "./Data";
 import Menu from "./Menu";
-import { useState } from "react";
 import { Box } from "@mui/material";
 export default function BasicTable() {
   return (

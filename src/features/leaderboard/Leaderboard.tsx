@@ -1,8 +1,8 @@
 import { Container, Typography } from "@mui/material";
-import Title from "../../ui/Title";
 import Header from "./Header";
 import BasicTable from "./Table";
 import Filter from "./Filter";
+import Title from "../../ui/Title";
 export default function Leaderboard() {
   return (
     <Container maxWidth="xl" sx={{ marginTop: "3rem" }}>

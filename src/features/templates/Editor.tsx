@@ -1,6 +1,7 @@
 import { Button, Box } from "@mui/material";
 import CodeMirror from "@uiw/react-codemirror";
-
+import { oneDark } from "@codemirror/theme-one-dark";
+import { javascript } from "@codemirror/lang-javascript";
 export default function Editor() {
   return (
     <div
@@ -15,11 +16,9 @@ export default function Editor() {
       }}
     >
       <CodeMirror
-        options={{
-          theme: "monokai",
-          keyMap: "sublime",
-          mode: "jsx",
-        }}
+        
+        theme={oneDark}
+        extensions={[javascript()]}
         style={{
           color: "black",
           backgroundColor: "black",

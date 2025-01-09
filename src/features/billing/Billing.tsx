@@ -3,7 +3,7 @@ import DoneIcon from "@mui/icons-material/Done";
 import { useState } from "react";
 
 export default function Billing() {
-  const [value, setValue] = useState<number>(2);
+  const [value, setValue] = useState<number | number[]>(2);
   return (
     <Box display={"flex"} gap={2} width={"70%"} mb={4}>
       <Box
@@ -23,7 +23,7 @@ export default function Billing() {
           For power individuals and smaller teams
         </Typography>
         <Typography variant="h5" color="initial" sx={{ mt: 1 }}>
-          {value * 50}
+          {typeof value === "number" && value * 50}
           <Typography
             variant="body2"
             color="#93939B"
@@ -56,7 +56,7 @@ export default function Billing() {
           valueLabelDisplay="auto"
           sx={{ color: "#6366F1" }}
           value={value}
-          onChange={(e, v) => setValue(v)}
+          onChange={(_e, v) => setValue(v)}
           step={2}
           max={20}
           min={2}

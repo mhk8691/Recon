@@ -83,19 +83,7 @@ export default function BasicModal({
             Sign up for Enterprise
           </Typography>
           <hr style={{ border: "1px solid #27272A",marginTop:'.5rem' }} />
-          <Box sx={{mt:1}}>
-            <iframe
-              width="100%"
-              height="400"
-              src="https://www.youtube.com/embed/u1MepbaUXxQ"
-              title="ProjectDiscovery v0.9.0 | Real time vulnerability feed and technology scanning"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              style={{ borderRadius: "10px",border:"1px solid #27272A" }}
-            ></iframe>
-          </Box>
+        
           <Box>
             <Typography variant="body2" color="white" sx={{ mt: 3 }}>
               Vulnerability Management Enhancements
